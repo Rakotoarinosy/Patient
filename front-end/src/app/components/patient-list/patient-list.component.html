@@ -1,0 +1,41 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <button class="btn btn-primary" (click)="createPatient()">Nouveau Patient</button>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col">
+      <h2>Liste des Patients</h2>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nom</th>
+              <th>Date de Naissance</th>
+              <th>Age</th>
+              <th>Email</th>
+              <th>Genre</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let patient of patients">
+              <td>{{ patient.id }}</td>
+              <td>{{ patient.nom }}</td>
+              <td>{{ patient.dateDeNaissance }}</td>
+              <td>{{ patient.age }}</td>
+              <td>{{ patient.email }}</td>
+              <td>{{ patient.genre }}</td>
+              <td>
+                <button class="btn btn-sm btn-primary" (click)="editPatient(patient.id)">Editer</button>
+                <button class="btn btn-sm btn-danger" (click)="deletePatient(patient.id)">Supprimer</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

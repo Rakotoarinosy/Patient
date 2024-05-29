@@ -1,0 +1,33 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <h2>Edit Patient</h2>
+      <form (ngSubmit)="updatePatient()">
+        <div class="form-group">
+          <label for="nom">Nom:</label>
+          <input type="text" class="form-control" id="nom" [(ngModel)]="patient.nom" name="nom">
+        </div>
+        <div class="form-group">
+          <label for="dateNaissance">Date de naissance:</label>
+          <input type="date" class="form-control" id="dateNaissance" [(ngModel)]="patient.dateDeNaissance" name="dateDeNaissance">
+        </div>
+        <div class="form-group">
+          <label for="age">Age:</label>
+          <input type="number" class="form-control" id="age" [(ngModel)]="patient.age" name="age">
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" [(ngModel)]="patient.email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="genre">Genre:</label>
+          <select class="form-control" id="genre" [(ngModel)]="patient.genre" name="genre">
+            <option value="HOMME">HOMME</option>
+            <option value="FEMME">FEMME</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Modifier</button>
+      </form>
+    </div>
+  </div>
+</div>
